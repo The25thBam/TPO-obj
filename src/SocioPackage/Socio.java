@@ -14,9 +14,9 @@ public class Socio {
     private String telefono;
     private String correo;
     private Estado estado;
+
     private List<Socio> socios = new ArrayList<Socio>();
-    private List<Accionista> accionistas = new ArrayList<Accionista>();
-    private List<Documentacion> documentacions = new ArrayList<Documentacion>();
+    private ColeccionAccionistas accionistas;
 
     public Socio(String CUIT,String razonSocial,TipoSocio tipoSocio,String actividadPrincipal,String direccion,String telefono,String correo,Estado estado){
         this.CUIT = CUIT;
@@ -57,7 +57,7 @@ public class Socio {
     }
 
     public List<Accionista> getAccionistas(){
-        return accionistas;
+        return accionistas.getAll();
     }
 
 
