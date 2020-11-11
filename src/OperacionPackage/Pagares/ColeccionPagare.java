@@ -1,6 +1,8 @@
 package OperacionPackage.Pagares;
 
-import OperacionPackage.Pagares.Pagare;
+// no se usa?
+import SocioPackage.Documentaciones.Documentacion;
+
 import java.util.ArrayList;
 import java.util.List;
 
