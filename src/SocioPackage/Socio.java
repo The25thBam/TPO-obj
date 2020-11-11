@@ -1,8 +1,12 @@
 package SocioPackage;
 
-import SocioPackage.Estado;
+import SocioPackage.Accionistas.Accionista;
+import SocioPackage.Accionistas.ColeccionAccionistas;
+import SocioPackage.Documentaciones.ColeccionDocuementacion;
+import SocioPackage.Documentaciones.Documentacion;
+import SocioPackage.Facturas.ColeccionFactura;
+import SocioPackage.Facturas.Factura;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Socio {
@@ -15,9 +19,9 @@ public class Socio {
     private String correo;
     private Estado estado;
 
-    private List<Socio> socios = new ArrayList<Socio>();
     private ColeccionAccionistas accionistas;
-
+    private ColeccionDocuementacion documentaciones;
+    private ColeccionFactura facturas;
     public Socio(String CUIT,String razonSocial,TipoSocio tipoSocio,String actividadPrincipal,String direccion,String telefono,String correo,Estado estado){
         this.CUIT = CUIT;
         this.razonSocial = razonSocial;
@@ -30,41 +34,20 @@ public class Socio {
     }
 
 
-    public Socio getSocio(String CUIT){
-        Socio resultado = null;
-        for(int i = 0;i<socios.size();i++){
-            if(socios.get(i).getCuit() == CUIT){
-                resultado = socios.get(i);
-                break;
-            }
-        }
 
-        return resultado;
-
-    }
 
     public String getCuit(){
         return CUIT;
     }
 
-    public Socio addSocio(String CUIT,String razonSocial,TipoSocio tipoSocio,String actividadPrincipal,String direccion,String telefono,String correo,Estado estado){
-        Socio aux = getSocio(CUIT);
-        if(aux == null){
-            aux = new Socio(CUIT,razonSocial,tipoSocio,actividadPrincipal,direccion,telefono,correo,estado);
-        }
-        return aux;
 
-    }
 
     public List<Accionista> getAccionistas(){
         return accionistas.getAll();
     }
 
+    public List<Documentacion> getDocumentaciones(){ return documentaciones.getAll(); }
 
-
-
-
-
-
+    public List<Factura> getFacturas(){ return facturas.getAll(); }
 
 }

@@ -1,4 +1,4 @@
-package SocioPackage;
+package SocioPackage.Documentaciones;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,15 +15,10 @@ public class Documentacion {
         this.tipo = tipo;
         this.estado = estado;
 
-
-
-
-
-
     }
 
-    public void cambiarEstado(Integer id,EstadoDocumentacion nuevoEstado){
-
+    public Integer getDocumentacionId(){
+        return id;
     }
 
 

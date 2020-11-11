@@ -1,17 +1,20 @@
-package SocioPackage;
+package SocioPackage.Accionistas;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Accionista {
-    private String CUIL;
-    private Integer porcentaje;
+public class ColeccionAccionistas {
     private List<Accionista> accionistas = new ArrayList<Accionista>();
 
-    public Accionista(String CUIL,Integer porcentaje){
-        this.CUIL = CUIL;
-        this.porcentaje = porcentaje;
+    public ColeccionAccionistas(List<Accionista> accionistas){
+        this.accionistas = accionistas;
     }
+
+
+    public List<Accionista> getAll(){
+        return accionistas;
+    }
+
 
     public Accionista getAccionista(String CUIL){
 
@@ -26,21 +29,13 @@ public class Accionista {
     }
 
 
-    public String getCuil(){
-        return CUIL;
-    }
-
-
-    public Accionista addAccionista(String CUIL,Integer porcentaje){
-        Accionista aux = getAccionista(CUIL);
+    public void addAccionista(Accionista nuevoAccionista){
+        Accionista aux = getAccionista(nuevoAccionista.getCuil());
         if(aux == null){
-            aux = new Accionista(CUIL,porcentaje);
+            accionistas.add(nuevoAccionista);
         }
-        return aux;
 
     }
-
-
 
 
 }

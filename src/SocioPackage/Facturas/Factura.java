@@ -1,4 +1,4 @@
-package SocioPackage;
+package SocioPackage.Facturas;
 
 public class Factura {
     private String nro;
@@ -17,5 +17,6 @@ public class Factura {
         return importe;
     }
 
+    public String getNro(){ return nro; }
 
 }

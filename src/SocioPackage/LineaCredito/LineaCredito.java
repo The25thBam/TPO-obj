@@ -1,4 +1,4 @@
-package SocioPackage;
+package SocioPackage.LineaCredito;
 
 import java.util.Date;
 
