@@ -5,10 +5,10 @@ package OperacionPackage.Cheques;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ColeccionCheque {
+public class ColeccionesCheque {
     private List<Cheque> cheques = new ArrayList<Cheque>();
 
-    public ColeccionCheque(List<Cheque> cheques){
+    public ColeccionesCheque(List<Cheque> cheques){
         this.cheques = cheques;
     }
 

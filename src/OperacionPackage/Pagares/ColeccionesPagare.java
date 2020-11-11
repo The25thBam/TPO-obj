@@ -6,10 +6,10 @@ import SocioPackage.Documentaciones.Documentacion;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ColeccionPagare {
+public class ColeccionesPagare {
     private List<Pagare> pagares = new ArrayList<Pagare>();
 
-    public ColeccionPagare(List<Pagare> pagares){
+    public ColeccionesPagare(List<Pagare> pagares){
         this.pagares = pagares;
     }
 
