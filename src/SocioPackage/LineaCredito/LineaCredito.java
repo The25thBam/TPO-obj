@@ -9,6 +9,7 @@ public class LineaCredito {
     private Date fechaFin;
     private Boolean aprobada;
     //Esto no se para que es
+	//Era para saber si esta endeudado o no(creo)
     private Character estado;
 
     public  LineaCredito(Float monto,Date fechaInicio,Date fechaFin,Boolean aprobada,Character estado){
