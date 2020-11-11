@@ -1,8 +1,8 @@
-package OperacionPackage;
+package OperacionPackage.Pagares;
 
 import java.util.Date;
 
-class Pagare{
+public class Pagare{
     private String nro;
     private Date fecha;
     private float monto;
