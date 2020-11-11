@@ -1,4 +1,4 @@
-package OperacionPackage.Cheque;
+package OperacionPackage.Cheques;
 
 import java.util.Date;
 
