@@ -20,4 +20,20 @@ public class LineaCredito {
         this.estado = estado;
     }
 
+
+
+    public Float obtenerMonto(){
+        return monto;
+    }
+
+
+    public Boolean estaAprobada(){
+        return aprobada;
+    }
+
+
+    public  Character getEstado(){
+        return estado;
+    }
+
 }

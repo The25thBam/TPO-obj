@@ -20,7 +20,7 @@ public class ColeccionFactura {
     public Factura getFacturaByNro(String nro){
         Factura resultado = null;
         for(int i = 0;i<facturas.size();i++){
-            if(facturas.get(i).getNro() == nro){
+            if(facturas.get(i).getNro().equals(nro)){
                 resultado = facturas.get(i);
                 break;
             }
