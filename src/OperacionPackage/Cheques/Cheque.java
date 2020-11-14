@@ -33,4 +33,8 @@ public class Cheque{
     public String getNro(){
         return nro;
     }
+
+    public Date getFecha() {
+        return fecha;
+    }
 }

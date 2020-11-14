@@ -28,4 +28,8 @@ public class Pagare{
     public String getNro(){
         return nro;
     }
+
+    public Date getFecha() {
+        return fecha;
+    }
 }
