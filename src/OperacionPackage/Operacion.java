@@ -23,6 +23,7 @@ public class Operacion{
     private String nroOperacion;
     private Date fecha;
     private String CuitSocio;
+    private Integer tipo;
     private static List<Cheque> cheques = new ArrayList<Cheque>();
 
 
@@ -75,6 +76,8 @@ public class Operacion{
     public String getNroOperacion() { return nroOperacion; }
 
     public String getCuitSocio(){ return CuitSocio; }
+
+    public Integer getTipo(){ return  tipo; }
 
 
 
