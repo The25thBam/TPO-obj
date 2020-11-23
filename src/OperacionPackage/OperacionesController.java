@@ -1,5 +1,6 @@
 package OperacionPackage;
 
+import OperacionPackage.Cheques.Cheque;
 import OperacionPackage.Cheques.ColeccionesCheque;
 import SocioPackage.Socio;
 
@@ -34,6 +35,24 @@ public class OperacionesController {
         return aux;
 
     }
+
+
+
+    // Esta funcion busca la operacion y le agrega un cheque a su listado
+    public static Cheque addCheque(String nroOpeacion,String banco, String nro, Date fecha, float valor, float tasaDeDescuento,float comision){
+        Operacion operacionAux = getOperacion(nroOpeacion);
+        Cheque aux = new Cheque(banco,nro,fecha,valor,tasaDeDescuento,comision);
+        if(operacionAux != null){
+            operacionAux.addCheque(aux);
+            return aux;
+        }
+        else {
+            return aux;
+        }
+
+    }
+
+
 
 
 }
