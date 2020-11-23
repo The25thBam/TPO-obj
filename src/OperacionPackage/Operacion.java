@@ -17,31 +17,27 @@ import java.util.List;
 
 public class Operacion{
     private String nombre;
-    private status estado;
+    private String estado;
     private String nroCertificado;
     private float importe;
     private String nroOperacion;
     private Date fecha;
+    private String CuitSocio;
     private static List<Cheque> cheques = new ArrayList<Cheque>();
 
 
-    public Operacion(String nombre, status estado, String nroCertificado, float importe, String nroOperacion, Date fecha) {
+    public Operacion(String nombre, String estado, String nroCertificado, float importe, String nroOperacion, Date fecha,String CuitSocio) {
         this.nombre = nombre;
         this.estado = estado;
         this.nroCertificado = nroCertificado;
         this.importe = importe;
         this.nroOperacion = nroOperacion;
         this.fecha = fecha;
+        this.CuitSocio = CuitSocio;
+
     }
 
-    public double calcularComision(){
-        if (this.estado == status.Monetizado) {
-            return this.importe * 0.04;
-        }
-        else {
-            return this.importe *0.03;
-        }
-    }
+
 
     public List<Cheque> getChequeFecha(Date fecha){
         return ColeccionesCheque.getChequeByFecha(fecha);
@@ -68,7 +64,7 @@ public class Operacion{
         return importe;
     }
 
-    public status getEstado(){
+    public String getEstado(){
         return estado;
     }
 
@@ -77,6 +73,8 @@ public class Operacion{
     }
 
     public String getNroOperacion() { return nroOperacion; }
+
+    public String getCuitSocio(){ return CuitSocio; }
 
 
 
@@ -111,10 +109,10 @@ public class Operacion{
         return resultado;
     }
 
-    // Este metodo es para la consulta general nro 1
-    public static float calcularComisionPorFecha(Date fecha){
+    // Este calcula la comision de todos los cheques que tiene la operacion
+    public static float calcularComisionCheque(){
         float contador = 0;
-        List<Cheque> cheques = getChequeByFecha(fecha);
+
         for(int i = 0;i<cheques.size();i++){
             contador = contador + cheques.get(i).getComision();
         }

@@ -26,10 +26,10 @@ public class OperacionesController {
     }
 
 
-    public static Operacion addOperacion(String nroOperacion,String nombre,status estado,String nroCertificado,float importe,Date fecha){
+    public static Operacion addOperacion(String nroOperacion,String nombre,String estado,String nroCertificado,float importe,Date fecha,String CuitSocio){
         Operacion aux = getOperacion(nroOperacion);
         if(aux == null){
-            aux = new Operacion(nombre,estado,nroCertificado,importe,nroOperacion,fecha);
+            aux = new Operacion(nombre,estado,nroCertificado,importe,nroOperacion,fecha,CuitSocio);
         }
 
         return aux;
@@ -51,6 +51,58 @@ public class OperacionesController {
         }
 
     }
+
+
+
+    public static List<Operacion> getOperacionesByFecha(Date fecha){
+        List<Operacion> aux = new ArrayList<Operacion>();
+        for(int i = 0;i<operaciones.size();i++){
+            if(operaciones.get(i).getFecha().equals(fecha)){
+                aux.add(operaciones.get(i));
+            }
+        }
+
+        return aux;
+    }
+
+    /* ----------------------------------- Cosultas Generales ------------------------------------------------- */
+
+    // Esta funcion implementa la consulta general 1
+    public static float calcularComisionChequeByFecha(Date fecha){
+        List<Operacion> opAux = getOperacionesByFecha(fecha);
+        float contador = 0;
+        for(int i = 0;i<operaciones.size();i++){
+            contador = contador + operaciones.get(i).calcularComisionCheque();
+        }
+
+        return contador;
+
+    }
+
+
+    public static boolean estaEnPeriodo(Operacion op,Date fechaInicio,Date fechaFin){
+        if(op.getFecha().after(fechaInicio) && op.getFecha().before(fechaFin)){
+            return true;
+        }
+        return false;
+    }
+
+
+    // Esta funcion implementa la consulta general nro 2
+    public static List<Operacion> getOperacionesMonetizadasBySocio(Date fechaInicio,Date fechaFin,String Cuit){
+        List<Operacion> operacionesAux = new ArrayList<Operacion>();
+        for(int i = 0;i<operaciones.size();i++){
+            if(estaEnPeriodo(operaciones.get(i),fechaInicio,fechaFin) && operaciones.get(i).getCuitSocio().equals(Cuit)){
+                operacionesAux.add(operaciones.get(i));
+            }
+
+
+        }
+
+        return operacionesAux;
+    }
+
+
 
 
 
