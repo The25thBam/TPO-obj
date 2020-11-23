@@ -2,7 +2,6 @@ package OperacionPackage;
 
 import OperacionPackage.Cheques.Cheque;
 import OperacionPackage.Cheques.ColeccionesCheque;
-import OperacionPackage.Comision.Comision;
 import OperacionPackage.CuentasCorrientesComerciales.CuentaCorrienteComercial;
 import OperacionPackage.CuentasCorrientesComerciales.ColeccionesCuentasCorrientesComerciales;
 import OperacionPackage.Pagares.Pagare;
