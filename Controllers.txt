@@ -1,0 +1,80 @@
+public class SocioController {
+	//objetos vista y modelo
+	private SocioView vista;
+	private Socio modelo;
+ 
+	//constructor para inicializar el modelo y la vista
+	public SocioController(Socio modelo, SocioView vista) {
+		this.modelo = modelo;
+		this.vista = vista;
+	}
+ 
+	//getters y setters para el modelo
+	public int getCUIT() {
+		return modelo.getCUIT();
+	}
+	public void setCUIT(int cuit) {
+		this.modelo.setCUIT(cuit);
+	}
+	public String getEstado() {
+		return modelo.getEstado();
+	}
+	public void setEstado(String estado) {
+		this.modelo.setEstado(estado); 
+	}
+	public String getTipoSocio() {
+		return modelo.getTipoSocio();
+	}
+	public void setTipoSocio(String tiposocio) {
+		this.modelo.setTipoSocio(tiposocio);
+	}
+	
+	//pasa el modelo a la vista para presentar los datos
+	public void actualizarVista() {
+		vista.imprimirDatosSocio(modelo.getCUIT(),modelo.getEstado(), modelo.getTiposocio());
+	}
+
+
+
+
+
+
+
+
+
+
+public class OperacionController {
+	//objetos vista y modelo
+	private OperacionView vista;
+	private Operacion modelo;
+ 
+	//constructor para inicializar el modelo y la vista
+	public OperacionController(Operacion modelo, OperacionView vista) {
+		this.modelo = modelo;
+		this.vista = vista;
+	}
+ 
+	//getters y setters para el modelo
+	public int getOperaciones() {
+		return modelo.getOperaciones();
+	}
+	public void setOperaciones(int operaciones) {
+		this.modelo.setOperaciones(operaciones);
+	}
+	public String getcalcularComision() {
+		return modelo.getcalcularComision();
+	}
+	public void setcalcularComision(float comision) {
+		this.modelo.setcalcularComision(comision); 
+	}
+	public String getverificarLinea() {
+		return modelo.getverificarLinea();
+	}
+	public void setverificarLinea(Boolean verificarlinea) {
+		this.modelo.setverificarLinea(verificarLinea);
+	}
+	
+	//pasa el modelo a la vista para presentar los datos
+	public void actualizarVista() {
+		vista.imprimirDatosAccionista(modelo.getCUIL(),modelo.getEstado(), modelo.getTiposocio());
+	}
