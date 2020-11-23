@@ -28,22 +28,15 @@ public class sociosView {
     private JTextField estadoTextField;
     private JCheckBox estaAprobadoCheckBox;
     private JComboBox comboBox1;
-    private JTextField CUITTextField;
-    private JTextField razonSocialTextField1;
-    private JTextArea textArea9;
-    private JTextField fechaInicioTextField1;
-    private JTextField tipoTextField1;
-    private JTextArea textArea10;
-    private JTextField actividadPrincipalTextField1;
-    private JTextArea textArea11;
-    private JTextArea textArea12;
-    private JTextField direccionTextField1;
-    private JTextArea textArea13;
-    private JTextField telefonoTextField1;
-    private JTextArea textArea14;
-    private JTextField correoTextField1;
+    private JLabel CUITLabel;
+    private JLabel razonSocialLabel;
+    private JLabel fechaInicioLabel;
+    private JLabel tipoLabel;
+    private JLabel actividadPrincipalLabel;
+    private JLabel direccionLabel;
+    private JLabel telefonoLabel;
+    private JLabel correoLabel;
     private JTextField estadoTextField1;
-    private JTextArea textArea15;
     private JCheckBox estaAprobadoCheckBox1;
     private JButton editarButton;
     private JTextField ingreseElCUITTextField;
@@ -52,6 +45,13 @@ public class sociosView {
     private JButton borrarButton;
     private JList list1;
     private JButton agregarButton;
+    private JTextField textField1;
+    private JTextField textField2;
+    private JTextField textField3;
+    private JTextField textField4;
+    private JTextField textField5;
+    private JTextField textField6;
+    private JTextField textField7;
 
     private static JFrame sociosFrame = new JFrame("Socios");
 

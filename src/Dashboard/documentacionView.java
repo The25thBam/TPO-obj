@@ -5,17 +5,18 @@ import javax.swing.*;
 public class documentacionView {
     private JTabbedPane tabbedPane1;
     private JList list1;
-    private JTextField textArea1;
     private JLabel estadoLabel;
-    private JTextField textArea2;
     private JLabel tipoLabel;
     private JTextField ingreseNombreDelArchivoTextField;
-    private JTextArea textArea16;
     private JCheckBox estaSeguroCheckBox;
     private JButton borrarButton;
     private JButton cargarArchivoButton;
     private JButton agregarButton;
     private JPanel documentacionPanel;
+    private JTextField textField1;
+    private JTextField textField2;
+    private JTextField textField3;
+    private JTextField textField4;
 
     private static JFrame documentacionFrame = new JFrame("Documentacion");
 
