@@ -1,5 +1,5 @@
-package SocioPackage;
+/*package SocioPackage;
 
 public enum Estado {
     Postulante,Pleno
-}
+}*/

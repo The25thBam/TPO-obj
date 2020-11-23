@@ -17,12 +17,13 @@ import java.util.List;
 public class Socio {
     private String CUIT;
     private String razonSocial;
-    private TipoSocio tipoSocio;
+    private String FechaInicio;
+    private String tipoSocio;
     private String actividadPrincipal;
     private String direccion;
     private String telefono;
     private String correo;
-    private Estado estado;
+    private boolean estado;
 
     private ColeccionAccionistas accionistas;
     private ColeccionDocuementacion documentaciones;
@@ -31,9 +32,10 @@ public class Socio {
     private ColeccionAportes aportes;
     private FDR fondoDeRiesgo;
 
-    public Socio(String CUIT,String razonSocial,TipoSocio tipoSocio,String actividadPrincipal,String direccion,String telefono,String correo,Estado estado){
+    public Socio(String CUIT,String razonSocial, String FechaInicio,String tipoSocio,String actividadPrincipal,String direccion,String telefono,String correo,boolean estado){
         this.CUIT = CUIT;
         this.razonSocial = razonSocial;
+        this.FechaInicio = FechaInicio;
         this.tipoSocio = tipoSocio;
         this.actividadPrincipal = actividadPrincipal;
         this.direccion = direccion;

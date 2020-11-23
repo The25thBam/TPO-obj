@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SocioController {
-    private List<Socio> socios = new ArrayList<Socio>();
+    private static List<Socio> socios = new ArrayList<Socio>();
 
-    public Socio getSocio(String CUIT){
+    public static Socio getSocio(String CUIT){
         Socio resultado = null;
         for(int i = 0;i<socios.size();i++){
             if(socios.get(i).getCuit() == CUIT){
@@ -20,10 +20,11 @@ public class SocioController {
     }
 
 
-    public Socio addSocio(String CUIT, String razonSocial, TipoSocio tipoSocio, String actividadPrincipal, String direccion, String telefono, String correo, Estado estado){
+    public static Socio addSocio(String CUIT, String razonSocial, String FechaInicio, String tipoSocio, String actividadPrincipal, String direccion, String telefono, String correo, boolean estado){
+        //System.out.println("Socio: " + CUIT + "Boolean: " + estado);
         Socio aux = getSocio(CUIT);
         if(aux == null){
-            aux = new Socio(CUIT,razonSocial,tipoSocio,actividadPrincipal,direccion,telefono,correo,estado);
+            aux = new Socio(CUIT,razonSocial, FechaInicio, tipoSocio,actividadPrincipal,direccion,telefono,correo,estado);
         }
         return aux;
 
