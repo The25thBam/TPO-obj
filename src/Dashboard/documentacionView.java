@@ -5,10 +5,10 @@ import javax.swing.*;
 public class documentacionView {
     private JTabbedPane tabbedPane1;
     private JList list1;
-    private JTextArea textArea1;
-    private JTextField estadoTextField2;
-    private JTextArea textArea2;
-    private JTextField tipoTextField;
+    private JTextField textArea1;
+    private JLabel estadoLabel;
+    private JTextField textArea2;
+    private JLabel tipoLabel;
     private JTextField ingreseNombreDelArchivoTextField;
     private JTextArea textArea16;
     private JCheckBox estaSeguroCheckBox;

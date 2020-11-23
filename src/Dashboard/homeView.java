@@ -5,7 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class homeView {
-    private JTextField homeTextField;
+    private JLabel homeLabel;
     private JButton sociosButton;
     private JButton operacionesButton;
     private JButton documentacionButton;

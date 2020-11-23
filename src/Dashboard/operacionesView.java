@@ -6,20 +6,13 @@ public class operacionesView {
     private JTabbedPane tabbedPane1;
     private JList list1;
     private JButton agregarButton;
-    private JTextArea textArea1;
-    private JTextField estadoTextField2;
-    private JTextArea textArea2;
-    private JTextField numeroDeCertificadoTextField;
-    private JTextArea textArea3;
-    private JTextField nombreTextField;
-    private JTextField cantidadDeOperacionesTextField;
-    private JTextArea textArea4;
-    private JTextField importeTextField;
-    private JTextArea textArea5;
-    private JTextField numeroDeOperacionTextField;
-    private JTextArea textArea6;
-    private JTextField fechaTextField;
-    private JTextArea textArea7;
+    private JLabel estadoLabel;
+    private JLabel numeroDeCertificadoLabel;
+    private JLabel nombreLabel;
+    private JLabel cantidadDeOperacionesLabel;
+    private JLabel importeLabel;
+    private JLabel numeroDeOperacionLabel;
+    private JLabel fechaLabel;
     private JTextField numeroDeOperacionTextField1;
     private JTextField nombreTextField1;
     private JTextArea textArea9;
@@ -40,6 +33,14 @@ public class operacionesView {
     private JButton editarButton;
     private JTextArea textArea8;
     private JPanel operacionesPanel;
+    private JTextField textField1;
+    private JTextField textField2;
+    private JTextField textField3;
+    private JTextField textField4;
+    private JTextField textField5;
+    private JTextField textField6;
+    private JTextField textField7;
+    private JTextField textField8;
 
     private static JFrame operacionesFrame = new JFrame("Operaciones");
 
