@@ -39,4 +39,14 @@ public class operacionesView {
     private JButton borrarButton;
     private JButton editarButton;
     private JTextArea textArea8;
+    private JPanel operacionesPanel;
+
+    private static JFrame operacionesFrame = new JFrame("Operaciones");
+
+    public static void newOperacionesFrame(){
+        operacionesFrame.setContentPane(new operacionesView().operacionesPanel);
+        operacionesFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        operacionesFrame.pack();
+        operacionesFrame.setVisible(true);
+    }
 }

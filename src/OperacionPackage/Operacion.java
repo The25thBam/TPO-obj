@@ -2,6 +2,7 @@ package OperacionPackage;
 
 import OperacionPackage.Cheques.Cheque;
 import OperacionPackage.Cheques.ColeccionesCheque;
+import OperacionPackage.Comision.Comision;
 import OperacionPackage.CuentasCorrientesComerciales.CuentaCorrienteComercial;
 import OperacionPackage.CuentasCorrientesComerciales.ColeccionesCuentasCorrientesComerciales;
 import OperacionPackage.Pagares.Pagare;
@@ -29,15 +30,6 @@ public class Operacion{
         this.importe = importe;
         this.nroOperacion = nroOperacion;
         this.fecha = fecha;
-    }
-
-    public double calcularComision(){
-        if (this.estado == status.Monetizado) {
-            return this.importe * 0.04;
-        }
-        else {
-            return this.importe *0.03;
-        }
     }
 
     public Cheque getChequeFecha(Date fecha){

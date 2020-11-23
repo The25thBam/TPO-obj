@@ -22,6 +22,27 @@ public class homeView {
                 sociosView.newSociosFrame();
             }
         });
+        operacionesButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                homeFrame.setVisible(false);
+                operacionesView.newOperacionesFrame();
+            }
+        });
+        documentacionButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                homeFrame.setVisible(false);
+                documentacionView.newDocumentacionFrame();
+            }
+        });
+        otrosButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                homeFrame.setVisible(false);
+                otrosView.newOtrosFrame();
+            }
+        });
     }
 
     public static void main(String[] args){
