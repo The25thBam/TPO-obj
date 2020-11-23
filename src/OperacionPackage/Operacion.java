@@ -32,6 +32,15 @@ public class Operacion{
         this.fecha = fecha;
     }
 
+    public double calcularComision(){
+        if (this.estado == status.Monetizado) {
+            return this.importe * 0.04;
+        }
+        else {
+            return this.importe *0.03;
+        }
+    }
+
     public Cheque getChequeFecha(Date fecha){
         return ColeccionesCheque.getChequeByFecha(fecha);
     }
