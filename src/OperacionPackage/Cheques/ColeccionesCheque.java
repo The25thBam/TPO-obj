@@ -28,15 +28,28 @@ public class ColeccionesCheque {
         return resultado;
     }
 
-    public static Cheque getChequeByFecha(Date fecha){
-        Cheque resultado = null;
+    public static List<Cheque> getChequeByFecha(Date fecha){
+        List<Cheque> resultado = null;
+
         for(int i = 0;i<cheques.size();i++){
             if(cheques.get(i).getFecha() == fecha){
-                resultado = cheques.get(i);
-                break;
+                resultado.add(cheques.get(i));
+
             }
         }
         return resultado;
+    }
+
+    // Este metodo es para la consulta general nro 1
+    public static float calcularComisionPorFecha(Date fecha){
+        float contador = 0;
+        List<Cheque> cheques = getChequeByFecha(fecha);
+        for(int i = 0;i<cheques.size();i++){
+            contador = contador + cheques.get(i).getComision();
+        }
+
+
+        return contador;
     }
 
 

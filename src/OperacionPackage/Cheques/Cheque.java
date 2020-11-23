@@ -8,6 +8,7 @@ public class Cheque{
     private Date fecha;
     private float valor;
     private float tasaDeDescuento;
+    private float comision;
 
 
     // no se si esta tenia que hacer esto u otra cosa
@@ -18,12 +19,14 @@ public class Cheque{
         return false;
     }
 
-    public Cheque(String banco, String nro, Date fecha, float valor, float tasaDeDescuento){
+    public Cheque(String banco, String nro, Date fecha, float valor, float tasaDeDescuento,float comision){
         this.banco = banco;
         this.nro = nro;
         this.fecha = fecha;
         this.valor = valor;
         this.tasaDeDescuento = tasaDeDescuento;
+        this.comision = comision;
+
     }
 
     public float getValor() {
@@ -36,5 +39,9 @@ public class Cheque{
 
     public Date getFecha() {
         return fecha;
+    }
+
+    public float getComision(){
+        return comision;
     }
 }
