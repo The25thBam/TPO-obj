@@ -1,5 +1,5 @@
 package OperacionPackage;
 
-public enum Status {
+public enum status {
     Ingresado, CertificadoEmito, Monetizado
 }

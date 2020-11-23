@@ -15,14 +15,14 @@ import java.util.List;
 
 public class Operacion{
     String nombre;
-    Status estado;
+    status estado;
     String nroCertificado;
     int cantidadOperaciones;
     float importe;
     String nroOperacion;
     Date fecha;
 
-    public Operacion(String nombre, Status estado, String nroCertificado, int cantidadOperaciones, float importe, String nroOperacion, Date fecha) {
+    public Operacion(String nombre, status estado, String nroCertificado, int cantidadOperaciones, float importe, String nroOperacion, Date fecha) {
         this.nombre = nombre;
         this.estado = estado;
         this.nroCertificado = nroCertificado;
@@ -57,7 +57,7 @@ public class Operacion{
         return importe;
     }
 
-    public Status getEstado(){
+    public status getEstado(){
         return estado;
     }
 
